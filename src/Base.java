@@ -1,6 +1,5 @@
 
 public class Base {
-	
 	private String nombrebase;
 	private int resistenciabase;
 	

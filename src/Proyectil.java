@@ -1,0 +1,28 @@
+
+public class Proyectil {
+	private String tipo;
+	private double velocidad;
+	private double daño;
+	
+	public Proyectil(String tipo, double velocidad, double daño) {
+	
+		this.tipo = tipo;
+		this.velocidad = velocidad;
+		this.daño = daño;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public double getVelocidad() {
+		return velocidad;
+	}
+	public double getDaño() {
+		return daño;
+	}
+	public void mostrarInfo() {
+		System.out.println("Tipo de proyectil: "+tipo);
+		System.out.println("Velocidad de proyectil: "+velocidad);
+		System.out.println("daño: "+daño);
+	}
+
+}
