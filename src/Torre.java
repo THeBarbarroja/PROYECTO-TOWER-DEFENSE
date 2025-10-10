@@ -22,7 +22,7 @@ public class Torre   {
 	}
 	public void atacarEnemigo(Enemigo enemigo) {
 		System.out.println(nombretorre+"esta atacando a"+enemigo.getNombre());
-		enemigo.recibirDaño();
+		enemigo.recibirDaño(daño);
 		
 		
 	}
