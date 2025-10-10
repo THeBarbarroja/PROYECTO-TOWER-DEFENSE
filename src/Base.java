@@ -17,7 +17,7 @@ public class Base {
 		return resistenciabase;
 	}
 	public void mostrarInfo() {
-		System.out.println("Nombre de tu base"+nombrebase);
-		System.out.println("resistencia de tu base"+resistenciabase);
+		System.out.println("Nombre de tu base: "+nombrebase);
+		System.out.println("resistencia de tu base: "+resistenciabase);
 	}
 }

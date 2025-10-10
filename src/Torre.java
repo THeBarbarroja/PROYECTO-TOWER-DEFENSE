@@ -13,10 +13,17 @@ public class Torre   {
 		this.base = base;
 	}
 	public void mostrarInfo() {
-		System.out.println("Nombre de torre: "+nombretorre);
-		System.out.println("Resistencia de torre: "+resistencia);
-		System.out.println("Distancia de ataque: "+distanciaataque);
-		System.out.println("Daño por segundo: "+daño);
+		System.out.println("Nombre de torre: "+ nombretorre);
+		System.out.println("Resistencia de torre: "+ resistencia);
+		System.out.println("Distancia de ataque: " +distanciaataque);
+		System.out.println("Daño por segundo: "+ daño);
+		System.out.println("Torre defendiendo la base: "+ base.getNombrebase());
+		
+	}
+	public void atacarEnemigo(Enemigo enemigo) {
+		System.out.println(nombretorre+"esta atacando a"+enemigo.getNombre());
+		enemigo.recibirDaño();
+		
 		
 	}
 }
