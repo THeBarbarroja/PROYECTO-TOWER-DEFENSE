@@ -4,6 +4,7 @@ public class Torre   {
 	private int distanciaataque;
 	private double daño;
 	private Base base;//ASOCIACION(TORRE NECESITA A BASE)
+	protected Proyectil proyectil;
 	
 	public Torre(String nombretorre, int resistencia, int distanciaataque, double daño, Base base) {
 		this.nombretorre = nombretorre;
@@ -11,6 +12,7 @@ public class Torre   {
 		this.distanciaataque = distanciaataque;
 		this.daño = daño;
 		this.base = base;
+		this.proyectil = new Proyectil("flechas", 9.0, 20.0,this);
 	}
 	public void mostrarInfo() {
 		System.out.println("Nombre de torre: "+ nombretorre);

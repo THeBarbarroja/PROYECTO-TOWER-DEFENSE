@@ -3,12 +3,14 @@ public class Proyectil {
 	private String tipo;
 	private double velocidad;
 	private double daño;
+	private Torre torre;
 	
-	public Proyectil(String tipo, double velocidad, double daño) {
+	public Proyectil(String tipo, double velocidad, double daño,Torre torre) {
 	
 		this.tipo = tipo;
 		this.velocidad = velocidad;
 		this.daño = daño;
+		this.torre = torre;
 	}
 	public String getTipo() {
 		return tipo;
