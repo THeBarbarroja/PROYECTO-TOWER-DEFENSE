@@ -1,8 +1,8 @@
 
 public class Mapa {
 	private String nombre;
-	private Base base; //COMPOSICION
-	private Torre torre;//COMPOSICION
+	private Base base; //AGREGACION
+	private Torre torre;//AGREGACION
 	
 	public Mapa(String nombre, Base base, Torre torre) {
 		this.nombre = nombre;

@@ -12,7 +12,7 @@ public class Torre   {
 		this.distanciaataque = distanciaataque;
 		this.daño = daño;
 		this.base = base;
-		this.proyectil = new Proyectil("flechas", 9.0, 20.0,this);
+		this.proyectil = new Proyectil("flechas", 9.0, 20.0,this); 
 	}
 	public void mostrarInfo() {
 		System.out.println("Nombre de torre: "+ nombretorre);
@@ -22,7 +22,7 @@ public class Torre   {
 		System.out.println("Torre defendiendo la base: "+ base.getNombrebase());
 		
 	}
-	public void atacarEnemigo(Enemigo enemigo) {
+	public void atacarEnemigo(Enemigo enemigo) {//DEPENDENCIA
 		System.out.println(nombretorre+"esta atacando a"+enemigo.getNombre());
 		enemigo.recibirDaño(daño);
 		

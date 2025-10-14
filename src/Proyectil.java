@@ -6,7 +6,6 @@ public class Proyectil {
 	private Torre torre;
 	
 	public Proyectil(String tipo, double velocidad, double daño,Torre torre) {
-	
 		this.tipo = tipo;
 		this.velocidad = velocidad;
 		this.daño = daño;
