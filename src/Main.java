@@ -124,9 +124,10 @@ public class Main {
 		enemigo2.mostrarInfo();
 		mapa.mostrarInfo();
 		System.out.println("¡¡¡¡VICTORIA!!!!!");
+		
 		System.out.println("esto fue el tutorial de tower defense");
-		System.out.println("proximamente se van a agregar lootbox y skins a 9.99");
-		System.out.println("proximamente se van a agregar lootbox y skins a 9.99");
+		System.out.println("proximamente se van a agregar lootbox y skins a 9.99 para los gordos compus");
+		System.out.println("gracias por probar tower defense");
 		
 		
 }

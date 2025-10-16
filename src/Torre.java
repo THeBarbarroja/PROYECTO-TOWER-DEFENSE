@@ -1,5 +1,5 @@
 public class Torre   { 
-	private String nombretorre;
+	protected String nombretorre;
 	private int resistencia;
 	private int distanciaataque;
 	private double daño;
@@ -23,8 +23,8 @@ public class Torre   {
 		
 	}
 	public void atacarEnemigo(Enemigo enemigo) {//DEPENDENCIA
-		System.out.println(nombretorre+" esta atacando a "+enemigo.getNombre());
-		enemigo.recibirDaño(daño);
+		System.out.println(nombretorre+"lanza"+proyectil.getTipo()+" contra  "+enemigo.getNombre());
+		enemigo.recibirDaño(proyectil.getDaño());
 		
 		
 	}

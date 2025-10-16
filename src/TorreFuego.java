@@ -9,12 +9,13 @@ public TorreFuego(String nombretorre, int resistencia, int distanciaataque, doub
 
 }
 	public void atacarEnemigo(Enemigo enemigo) {
-		super.atacarEnemigo(enemigo); 
-		if(enemigo.getVida()>0) {
-			enemigo.recibirDaño(dañoextra);
-			System.out.println("La torre de fuego quema al enemigo por : "+dañoextra+"puntos de vida");
-		}else {
+		
+			System.out.println(nombretorre+"lanza"+proyectil.getTipo()+" contra  "+enemigo.getNombre());
+			enemigo.recibirDaño(proyectil.getDaño());
 			
+			if(enemigo.getVida()>0) {
+			enemigo.recibirDaño(dañoextra);
+			System.out.println(nombretorre+" quema al enemigo "+dañoextra+" puntos de vida ");
 		}
 		
 	}
