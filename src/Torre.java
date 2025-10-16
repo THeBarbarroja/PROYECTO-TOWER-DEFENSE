@@ -23,7 +23,7 @@ public class Torre   {
 		
 	}
 	public void atacarEnemigo(Enemigo enemigo) {//DEPENDENCIA
-		System.out.println(nombretorre+"esta atacando a"+enemigo.getNombre());
+		System.out.println(nombretorre+" esta atacando a "+enemigo.getNombre());
 		enemigo.recibirDaño(daño);
 		
 		

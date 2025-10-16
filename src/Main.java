@@ -5,6 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 		String nombrejugador;
 		String nombredebase;
+		String posicionTorre = null;
+		Torre torre = null;
+		
 		int opcion=0;
 		Scanner sc = new Scanner(System.in);
 		
@@ -49,25 +52,32 @@ public class Main {
 				opcion=0;
 				continue;
 			}
-			Torre torre1 = new Torre("Torre de flechas",100,15,15,nuevabase);
-			
 			switch (opcion) {
 				case 1:
 					System.out.println("seleccionaste la posicion Norte");
-					
-					
+					torre = new Torre("Torre de flechas",100,15,15,nuevabase);
+					posicionTorre = "posicion Norte";
 				break;
 				case 2:
 					System.out.println("seleccionaste la posicion Sur");
-					
+					torre = new Torre("Torre de flechas",100,15,15,nuevabase);
+					posicionTorre = "posicion Sur";
 				break;
 			default:
 					System.out.println("Error. Solo puedes elegir la posicion norte o la posicion sur");
 		}
 		}while(opcion!=1 && opcion!=2);
 			
-		
+		Mapa mapa = new Mapa("Tutorial", nuevabase,torre,posicionTorre);
+		System.out.println("----------------------");
+		mapa.mostrarInfo();
+		System.out.println("----------------------");
+		System.out.println("justo a tiempo. Se acercan los enemigos. Y tus torre ya estan defendiendo tu base");
+		Enemigo enemigo1 = new Enemigo("goblin",10, 5, 3);
+		torre.atacarEnemigo(enemigo1);
+		enemigo1.mostrarInfo();
 	}
+	
 }
 
 

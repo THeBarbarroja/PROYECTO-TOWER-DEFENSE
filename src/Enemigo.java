@@ -28,9 +28,9 @@ public class Enemigo {
 		vida-=Dañorecibido;
 		if(vida<0) vida=0;
 		if(vida==0)
-		{System.out.print(nombre+ " ha sido derrotado");
+		{System.out.println(nombre+ " ha sido derrotado");
 		}else {
-			{System.out.print(nombre+ "recibio"+Dañorecibido+" de daño.Vida restante "+vida);
+			{System.out.println(nombre+ "recibio"+Dañorecibido+" de daño.Vida restante "+vida);
 			}
 		}
 	}
