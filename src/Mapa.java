@@ -11,6 +11,39 @@ public class Mapa {
 		this.torre = torre;
 		this.posicionTorre = posicionTorre;
 	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Base getBase() {
+		return base;
+	}
+
+	public void setBase(Base base) {
+		this.base = base;
+	}
+
+	public Torre getTorre() {
+		return torre;
+	}
+
+	public void setTorre(Torre torre) {
+		this.torre = torre;
+	}
+
+	public String getPosicionTorre() {
+		return posicionTorre;
+	}
+
+	public void setPosicionTorre(String posicionTorre) {
+		this.posicionTorre = posicionTorre;
+	}
+
 	public void mostrarInfo() {
 		System.out.println("Nombre del mapa: "+nombre);
 		System.out.println("Informacion de base");

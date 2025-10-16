@@ -14,7 +14,7 @@ public TorreFuego(String nombretorre, int resistencia, int distanciaataque, doub
 			enemigo.recibirDaño(dañoextra);
 			System.out.println("La torre de fuego quema al enemigo por : "+dañoextra+"puntos de vida");
 		}else {
-			System.out.println(enemigo.getNombre()+" ha sido derrotado");
+			
 		}
 		
 	}

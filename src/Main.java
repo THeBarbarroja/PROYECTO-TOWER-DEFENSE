@@ -5,6 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		String nombrejugador;
 		String nombredebase;
+		int opciontorre;
 		String posicionTorre = null;
 		Torre torre = null;
 		
@@ -55,7 +56,7 @@ public class Main {
 			switch (opcion) {
 				case 1:
 					System.out.println("seleccionaste la posicion Norte");
-					torre = new Torre("Torre de flechas",100,15,15,nuevabase);
+					torre = new Torre("Torre de flechas",100,15,20,nuevabase);
 					posicionTorre = "posicion Norte";
 				break;
 				case 2:
@@ -72,12 +73,62 @@ public class Main {
 		System.out.println("----------------------");
 		mapa.mostrarInfo();
 		System.out.println("----------------------");
-		System.out.println("justo a tiempo. Se acercan los enemigos. Y tus torre ya estan defendiendo tu base");
+		System.out.println("justo a tiempo. Se acercan los enemigos.");
 		Enemigo enemigo1 = new Enemigo("goblin",10, 5, 3);
+		enemigo1.mostrarInfo();
+		sc.nextLine();
+		System.out.println("tus torre ya estan defendiendo tu base");
 		torre.atacarEnemigo(enemigo1);
 		enemigo1.mostrarInfo();
-	}
-	
+		sc.nextLine();
+		System.out.println("¡¡¡¡VICTORIA!!!!!");
+		System.out.println("pero viene mas enemigos");
+		System.out.println("es hora de sacar el armamento pesado");
+		System.out.println("LA TORRE DE FUEGO");
+		
+		System.out.println("¿quieres mejorar la torre de flechas a torre de fuego?");
+		do {
+			System.out.println("1)Mejorar torre");
+			System.out.println("2)Mantener torre");
+			if(sc.hasNextInt()) {
+				opciontorre=sc.nextInt();
+				sc.nextLine();
+			}else {
+				System.out.println("Error. Selecciona 1) Mejorar la torre a torre de fuego o 2) mantener la torre de flechas");
+				sc.nextLine();
+				opciontorre=0;
+				continue;
+			}
+			switch (opciontorre) {
+				case 1:
+					System.out.println("Mejoraste la torre a torre de fuego");
+					torre= new TorreFuego("Torre de fuego", 250, 20, 45,45, nuevabase);
+					mapa.setTorre(torre);
+				break;
+				case 2:
+					System.out.println("mantienes la torre de flechas");
+					
+				break;
+			default:
+					System.out.println("Error. Selecciona 1) Mejorar la torre a torre de fuego o 2) mantener la torre de flechas");
+		
+			}
+		}while(opciontorre!=1 && opciontorre!=2);
+		
+		System.out.println("se aacercan mas enemigos");
+		Enemigo enemigo2 = new Enemigo("Orco",20, 15,6);
+		enemigo2.mostrarInfo();
+		sc.nextLine();
+		System.out.println("la torre ha iniciado el ataque contra los enemigos");
+		torre.atacarEnemigo(enemigo2);
+		enemigo2.mostrarInfo();
+		mapa.mostrarInfo();
+		System.out.println("¡¡¡¡VICTORIA!!!!!");
+		System.out.println("esto fue el tutorial de tower defense");
+		System.out.println("proximamente se van a agregar lootbox y skins a 9.99");
+		System.out.println("proximamente se van a agregar lootbox y skins a 9.99");
+		
+		
 }
-
+}
 

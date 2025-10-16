@@ -26,20 +26,24 @@ public class Enemigo {
 	}
 	public void recibirDaño(double Dañorecibido) {
 		vida-=Dañorecibido;
-		if(vida<0) vida=0;
+		if(vida<0) 
+			vida=0;
+			daño=0;
+			velocidad=0;
 		if(vida==0)
 		{System.out.println(nombre+ " ha sido derrotado");
+		
 		}else {
-			{System.out.println(nombre+ "recibio"+Dañorecibido+" de daño.Vida restante "+vida);
+			{System.out.println(nombre+ " recibio "+Dañorecibido+" de daño.Vida restante " + vida);
 			}
 		}
 	}
 	
 	public void mostrarInfo() {
-		System.out.println("Enemigo: "+nombre);
-		System.out.println("vida: "+vida);
-		System.out.println("daño: "+daño);
-		System.out.println("velocidad: "+velocidad);
+		System.out.println("Enemigo: "+ nombre);
+		System.out.println("vida: "+ vida);
+		System.out.println("daño: "+ daño);
+		System.out.println("velocidad: "+ velocidad);
 
 	}
 
