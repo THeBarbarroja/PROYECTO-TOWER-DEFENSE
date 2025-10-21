@@ -3,7 +3,7 @@ public class Proyectil {
 	private String tipo;
 	private double velocidad;
 	private double daño;
-	private Torre torre;
+	private Torre torre;//ASOCIACION:Una clase usa a otra.
 	
 	public Proyectil(String tipo, double velocidad, double daño,Torre torre) {
 		this.tipo = tipo;

@@ -110,10 +110,11 @@ public class Main {
 					
 				break;
 			default:
-					System.out.println("Error. Selecciona 1) Mejorar la torre a torre de fuego o 2) mantener la torre de flechas");
+					System.out.println("Error. Selecciona 1 o 2");
+					opciontorre=0;
 		
 			}
-		}while(opciontorre!=1 && opciontorre!=2);
+		}while(opciontorre==0);
 		
 		System.out.println("se aacercan mas enemigos");
 		Enemigo enemigo2 = new Enemigo("Orco",20, 15,6);

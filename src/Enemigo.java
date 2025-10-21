@@ -24,12 +24,13 @@ public class Enemigo {
 	public double getVelocidad() {
 		return velocidad;
 	}
+	//DEPENDENCIA?: SE USA TEMPOTALMENTE POR OTRAS CLASES(TORRE,TORRE FUEGO)
 	public void recibirDaño(double Dañorecibido) {
 		vida-=Dañorecibido;
 		if(vida<0) 
-			vida=0;
-			daño=0;
-			velocidad=0;
+			vida=0;//CUANDO MUERE SE RESETEA LA VIDA
+			daño=0;//EL DAÑO
+			velocidad=0;//Y LA VELOCIDAD
 		if(vida==0)
 		{System.out.println(nombre+ " ha sido derrotado");
 		

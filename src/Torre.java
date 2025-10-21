@@ -3,9 +3,9 @@ public class Torre   {
 	private int resistencia;
 	private int distanciaataque;
 	private double daño;
-	private Base base;//ASOCIACION(TORRE NECESITA A BASE)
-	protected Proyectil proyectil;
-	
+	private Base base;//ASOCIACION:Una clase usa a otra.(TORRE NECESITA DE BASE PERO BASE PUEDE EXISTIR SIN TORRE)
+	protected Proyectil proyectil;//COMPOSICION: Una clase contiene a otra y controla totalmente su ciclo de vida.
+	//Si se elimina el objeto principal, también se eliminan sus partes.(SI TORRE DESAPARECE TAMBIEN DESAPARECE PROYECTIL)
 	public Torre(String nombretorre, int resistencia, int distanciaataque, double daño, Base base) {
 		this.nombretorre = nombretorre;
 		this.resistencia = resistencia;

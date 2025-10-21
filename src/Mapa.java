@@ -1,9 +1,11 @@
 
 public class Mapa {
 	private String nombre;
-	private Base base; //AGREGACION
-	private Torre torre;//AGREGACION
+	private Base base; //AGREGACION: mapa usa a base pero base puede existir por si sola
+	private Torre torre;//AGREGACION: mapa usa a torre pero torre puede existir por si sola
 	private String posicionTorre;
+	
+	//Una clase contiene a otra. Si se elimina el objeto principal, los contenidos pueden seguir existiendo.
 	
 	public Mapa(String nombre, Base base, Torre torre,String posicionTorre) {
 		this.nombre = nombre;
